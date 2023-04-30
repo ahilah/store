@@ -52,7 +52,16 @@ addEventOnelem(window, "scroll", activeHeader);
 
 
 
+/**
+ * open chapter prereading tab
+ */
 
+const tabCard = document.querySelectorAll("[data-tab-card]");
+let lastTabCard = tabCard[0];
+const navigateTab = function() {
+  lastTabCard.classList.remove("active");
+  this.classList.add("active");
+  lastTabCard = this;
+}
 
-
-
+addEventOnelem(tabCard, "click", navigateTab);
