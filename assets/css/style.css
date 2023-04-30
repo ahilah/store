@@ -215,7 +215,6 @@ body {
 
 }
 
-
 .section {
   padding-block: var(--section-padding);
 }
@@ -294,6 +293,32 @@ body {
 .btn-link:is(:hover, :focus) {
   color: var(--chinese-violet);
 }
+
+.has-underline {
+  position: relative;
+  margin-block-end: 60px;
+}
+
+.has-underline .span {
+  height: 2px;
+  background-color: var(--old-rose_30);
+  width: 200px;
+  margin-inline: auto;
+  margin-block-start: 30px;
+}
+
+.has-underline .has-before::before {
+  width: 18px;
+  height: 18px;
+  top: 2px;
+  left: 45%;
+  transform: translateY(-50%) rotate(45deg);
+  background-color: var(--old-rose_30);
+  box-shadow: 7px -7px var(--old-rose_30);
+}
+
+
+
 
 
 /*-----------------------------------*\
@@ -518,7 +543,22 @@ body {
               #CHAPTERS
 \*-----------------------------------*/
 
+.chapter-card {
+  height: 100%;
+  background-color: var(--white);
+  padding: 25px;
+  border-radius: var(--radius-5);
+  box-shadow: var(--shadow-2);
+  transition: var(--transition-2);
+}
 
+.chapter-card:is(:hover, :focus-within) {
+  transform: translateY(-10px);
+}
+
+.chapter-card .card-title {
+  margin-block-end: 15px;
+}
 
 
 
