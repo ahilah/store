@@ -175,7 +175,7 @@ body {
   color: var(--sonic-silver);
   font-size: 1.6rem;
   line-height: 1.8;
-  height: 400vh;
+  /*height: 400vh;*/ /* без цього не буде скролу */
 }
 
 :focus-visible {
@@ -206,9 +206,6 @@ body {
 
 
 
-
-
-
 /*-----------------------------------*\
              #REUSED STYLE
 \*-----------------------------------*/
@@ -218,6 +215,85 @@ body {
 
 }
 
+
+.section {
+  padding-block: var(--section-padding);
+}
+
+.section:nth-child(odd) {
+   background-color: var(--seashell);
+}
+
+.section-subtitle {
+  color: var(--old-rose);
+  text-transform: uppercase;
+  font-weight: var(--fs-700);
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+.h1,
+.h2,
+.h3,
+.tab-text {
+  color: var(--charcoal);
+  font-family: var(--ff-philosopher);
+  line-height: 1.2;
+}
+
+.h1 {
+  font-size: var(--fs-2);
+}
+
+.h2 {
+  font-size: var(--fs-3);
+}
+
+.h3 {
+  font-size: var(--fs-5);
+}
+
+.section-text {
+  font-size: var(--fs-7);
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.has-before,
+.has-after {
+  position: relative;
+  z-index: 1;
+}
+
+.has-before::before,
+.has-after::after {
+  content: "";
+  position: absolute;
+}
+
+.section-title {
+  text-align: center;
+}
+
+.grid-list {
+  display: grid;
+  gap: 25px;
+}
+
+.btn-link {
+  color: var(--old-rose);
+  font-weight: var(--fs-500);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: var(--transition-1);
+}
+
+.btn-link:is(:hover, :focus) {
+  color: var(--chinese-violet);
+}
 
 
 /*-----------------------------------*\
@@ -303,31 +379,138 @@ body {
 }
 
 .navbar-list {
-  margin-block-end: 10px;
-  
+  margin-block-end: 10px; /* встановлення зовнішнього відступу (порожнього простору) від кінця (нижньої границі) елемента */
+}
+
+.navbar-link {
+  color: var(--charcoal);
+  padding-block: 8px;
+  line-height: 1.5;
+  transition: var(--transition-1);
+}
+
+/* при наведенні на пункт меню він підсвічується іншим кольором */
+.navbar-link:is(:hover, :focus) {
+  color: var(--old-rose);
+
 }
 
 
 
+/*-----------------------------------*\
+                #HOME
+\*-----------------------------------*/
+
+.hero {
+  padding-block-start: calc(var(--section-padding) + 60px);
+  text-align: center;
+}
+
+.hero .container {
+  display: grid;
+  gap: 60px
+}
+
+.hero .hero-title {
+  margin-block: 16px 25px;
+}
 
 
+.hero-banner {
+  padding-inline-start: 30px;
+  padding-block-end: 30px;
+  max-width: 420px;
+  margin-inline: auto;
+}
 
+.hero-banner .w-100 {
+  border-radius: 9px 30px;
+}
+
+
+.hero-banner::before {
+  top: 30px;
+  right: 30px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--light-pink);
+  border-radius: var(--radius-10);
+  z-index: -1;
+}
 
 
 
 /*-----------------------------------*\
-                #HERO
+              #BOOKS
 \*-----------------------------------*/
 
+.books .section-text {
+  text-align: center;
+  margin-block: 8px 25px;
+}
 
+.books-card {
+  padding: 25px;
+  box-shadow: var(--shadow-2);
+  border-radius: var(--radius-5);
+  overflow: hidden;
+  transition: var(--transition-2);
+}
 
+.books-card::before,
+.books-card::after {
+  bottom: 0;
+  right: 0;
+  clip-path: var(--polygon);
+  transition: var(--transition-2);
+}
 
+.books-card::before {
+  width: 80px;
+  height: 80px;
+  background-color: var(--old-rose_30);
+  transform: translateY(60px);
+}
 
-/*-----------------------------------*\
-              #BENEFITS
-\*-----------------------------------*/
+.books-card::after {
+  width: 70px;
+  height: 70px;
+  background-color: var(--chinese-violet_30);
+  transform: translateY(65px);
+}
 
+.books-card:is(:hover, :focus-within) {
+  transform: translateY(-10px);
+}
 
+.books-card:is(:hover, :focus-within)::before,
+.books-card:is(:hover, :focus-within)::after {
+  transform: translateY(0);
+}
+
+.books-card:is(:hover, :focus-within)::after {
+  transition-delay: 0.09s;
+}
+
+.books-card .card-icon {
+  background-color: var(--old-rose);
+  max-width: max-content;
+  padding: 10px;
+  box-shadow: var(--shadow-3);
+  transition: var(--transition-1);
+}
+
+.books-card:is(:hover, :focus) .card-icon {
+  box-shadow: none;
+}
+
+.books-card .card-title {
+  margin-block: 20px 15px;
+}
+
+.books-card .btn-link {
+  margin-block-start: 15px;
+}
 
 
 

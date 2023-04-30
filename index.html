@@ -17,7 +17,7 @@ content="Discover the incredible worlds from the books of Stephen King - the rea
 <!-- 
     - favicon
   -->
-  <link rel="shortcut icon" href="./assets/images/favicon.jpg">
+  <link rel="shortcut icon" href=".\assets\images\favicon.jpg">
 <!-- 
     - preload image <link rel="preload" as="image" href="./assets/images/hero-banner.png">
   -->
@@ -25,7 +25,7 @@ content="Discover the incredible worlds from the books of Stephen King - the rea
   <!-- 
     - custom css link
   -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href=".\assets\css\style.css">
 
   <!-- 
     - google font link
@@ -38,66 +38,306 @@ content="Discover the incredible worlds from the books of Stephen King - the rea
 </head>
 
 <body>
-<header class="header active">
+  <!-- header active -->
+<header class="header" data-header>
     <div class="container">
         <a href="#" class="logo">Stephen King</a>
-    <nav class="navbar active">
+        <!-- navbar active -->
+      <nav class="navbar" data-navbar>
         <ul class="navbar-list">
             <li class="navbar-item">
-                <a href="#home" class="navbar-link">Home</a>
+                <a href="#home" class="navbar-link" data-nav-link>Home</a>
             </li>
 
             <li class="navbar-item">
-                <a href="#books" class="navbar-link">Books</a>
+                <a href="#books" class="navbar-link" data-nav-link>Books</a>
             </li>
 
             <li class="navbar-item">
-                <a href="#chapters" class="navbar-link">Chapters</a>
+                <a href="#chapters" class="navbar-link" data-nav-link>Chapters</a>
             </li>
 
             <li class="navbar-item">
-                <a href="#pricing" class="navbar-link">Pricing</a>
+                <a href="#pricing" class="navbar-link" data-nav-link>Pricing</a>
             </li>
 
             <li class="navbar-item">
-                <a href="#author" class="navbar-link">Author</a>
+                <a href="#author" class="navbar-link" data-nav-link>Author</a>
             </li>
 
             <li class="navbar-item">
-                <a href="#achievements" class="navbar-link">Achievements</a>
+                <a href="#achievements" class="navbar-link" data-nav-link>Achievements</a>
             </li>
 
             <li class="navbar-item">
-                <a href="#contact" class="navbar-link">Contact</a>
+                <a href="#contact" class="navbar-link" data-nav-link>Contact</a>
             </li>
         </ul>
     </nav>
     
-    <button class="nav-toggle-btn" aria-label="toggle-menu">
-        <ion-icon name="menu-outline" aria-hidden="true" class="open" data-nav-toggler></ion-icon>
-        <ion-icon name="close-outline" aria-hidden="true" class="close" data-nav-toggler></ion-icon>
+    <button class="nav-toggle-btn" aria-label="toggle-menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true" class="open"></ion-icon>
+        
     </button>
     </div>
 </header>
 
-<p>1111111
-</p>
+<!-- 
+    -- <ion-icon name="close-outline" aria-hidden="true" class="close"></ion-icon>
+  -->
+
+
 
 
 <!-- 
     -- js link
   -->
-  <script src="./assets/js/script.js" defer></script>
+  <script src=".\assets\js\script.js" defer></script>
 
   <!-- 
     - ionicon link
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <link rel="preload" as="image" href=".\assets\images\home-pic-dark-towel.jpg">
 
 
 
 
+  <main>
+    <article>
+
+    <!--
+    - HOME SECTION
+    -->
+
+  <section class="section hero" id="home" aria-label="home">
+    <div class="container">
+      <div class="hero-content">
+        
+        <p class="section-subtitle">
+          THE FAN SITE OF STEPHEN KING LITERARY ESTATE
+        </p>
+
+        <h1 class="h1 hero-title">
+          Read more and explore wonderful Stephen King's worlds
+        </h1>
+
+        <p class="section-text">
+          Stephen Edwin King described as the "King of Horror", a play on his surname and a reference to his high standing in pop culture, his books have sold more than 350 million copies as of 2006, and many have been adapted into films, television series, miniseries, and comic books
+        </p>
+
+        <div class="hero-banner has-before">
+          <img src=".\assets\images\home-pic-dark-towel.jpg" width="431" height="596" alt="dark tower 8 by stephen king" class="w-100">
+        </div>
+
+
+
+
+
+
+      </div>
+    </div>
+  </section>
+
+  <!--
+    - BOOKS SECTION
+    -->
+
+    <section class="section books" id="books" aria-label="books">
+      
+      <div class="container">
+
+        <div class="grid-list">
+
+          <li class="books-content">
+            <h2 class="h2 section-title">
+              Top-6 the best Stephen King books
+            </h2>
+
+            <p class="section-text">
+              According to Goodreads
+            </p>
+          </li>
+
+
+          <li>
+            <div class="books-card has-before has-after">
+              
+              <div class="card-icon">
+                <!-- цю картинку можна завантажувати затримкою -->
+                <img src="assets\images\books-1.svg" width="40" height="40" loading="lazy" alt="The Shining">
+              </div>
+              <h3 class="h3 card-title">
+                The Shining
+              </h3>
+              
+              <p class="card-text">
+                It's a deeply suspenseful paranormal story about Jack Torrance, who starts a new job as a caretaker at the Overlook Hotel, hoping to spend more time with his family and work on his writing. During the off-season, a chilling winter storm confines Jack to the hotel — and sinister forces begin to emerge. 
+              </p>
+
+              <a href="https://www.goodreads.com/book/show/11588.The_Shining" class="btn-link">
+                <span class="span">
+                  Read more
+                </span>
+                <ion-icon name="chevron-forward-outline" aria-hidden="true">
+
+                </ion-icon>
+              </a>
+
+            </div>
+
+          </li>
+
+          <li>
+            <div class="books-card has-before has-after">
+              
+              <div class="card-icon">
+                <!-- цю картинку можна завантажувати затримкою -->
+                <img src="assets\images\books-2.svg" width="40" height="40" loading="lazy" alt="It">
+              </div>
+              <h3 class="h3 card-title">
+                It
+              </h3>
+              
+              <p class="card-text">
+                In Derry, Maine, seven teenagers first discovered the horror that they deemed "It" — often taking the form of Pennywise the Clown. Now adults, each with their own successes, one of the self-proclaimed "Losers Club" asks the gang to return and end the evil creature's reign once and for all. 
+              </p>
+
+              <a href="https://www.goodreads.com/book/show/830502.It?from_search=true&from_srp=true&qid=ZhutxpeyGV&rank=3" class="btn-link">
+                <span class="span">
+                  Read more
+                </span>
+                <ion-icon name="chevron-forward-outline" aria-hidden="true">
+                  
+                </ion-icon>
+              </a>
+
+            </div>
+
+          </li>
+
+          <li>
+            <div class="books-card has-before has-after">
+              
+              <div class="card-icon">
+                <!-- цю картинку можна завантажувати затримкою -->
+                <img src="assets\images\books-3.svg" width="40" height="40" loading="lazy" alt="Misery">
+              </div>
+              <h3 class="h3 card-title">
+                Misery
+              </h3>
+              
+              <p class="card-text">
+                After celebrating the release of a new novel, Paul Sheldon gets in a car accident in the Rocky Mountains and is rescued by Anne Wilkes, his #1 fan. While nursing Paul back to health after he shattered both his legs, she compels him to write a new novel, furious that he killed off her favorite character. Fueled by obsession, Anne keeps Paul captive in a story of torture, psychological manipulation, and addiction.
+              </p>
+
+              <a href="https://www.goodreads.com/book/show/10614.Misery?ref=nav_sb_ss_1_6" class="btn-link">
+                <span class="span">
+                  Read more
+                </span>
+                <ion-icon name="chevron-forward-outline" aria-hidden="true">
+                  
+                </ion-icon>
+              </a>
+
+            </div>
+
+          </li>
+
+          <li>
+            <div class="books-card has-before has-after">
+              
+              <div class="card-icon">
+                <!-- цю картинку можна завантажувати затримкою -->
+                <img src="assets\images\books-4.svg" width="40" height="40" loading="lazy" alt="Carrie">
+              </div>
+              <h3 class="h3 card-title">
+                Carrie
+              </h3>
+              
+              <p class="card-text">
+                Carrie White, a telekinetic teenager who's able to move objects with her mind. Abused and bullied all her life, one particularly traumatic day unleashes a streak of revenge that cumulates with a famously terrifying prom night scene. 
+              </p>
+
+              <a href="https://www.goodreads.com/book/show/10592.Carrie?ref=nav_sb_ss_2_6" class="btn-link">
+                <span class="span">
+                  Read more
+                </span>
+                <ion-icon name="chevron-forward-outline" aria-hidden="true">
+                  
+                </ion-icon>
+              </a>
+
+            </div>
+
+          </li>
+
+          <li>
+            <div class="books-card has-before has-after">
+              
+              <div class="card-icon">
+                <!-- цю картинку можна завантажувати затримкою -->
+                <img src="assets\images\books-5.svg" width="40" height="40" loading="lazy" alt="The Gunslinger">
+              </div>
+              <h3 class="h3 card-title">
+                The Gunslinger
+              </h3>
+              
+              <p class="card-text">
+                This is the first installment of King's hugely popular series "The Dark Tower," of which there are eight books and a short story. Roland of Gilead is The Last Gunslinger — the final hero in a knightly order.
+              </p>
+
+              <a href="https://www.goodreads.com/book/show/43615.The_Gunslinger?ref=nav_sb_ss_1_14" class="btn-link">
+                <span class="span">
+                  Read more
+                </span>
+                <ion-icon name="chevron-forward-outline" aria-hidden="true">
+                  
+                </ion-icon>
+              </a>
+
+            </div>
+
+          </li>
+
+          <li>
+            <div class="books-card has-before has-after">
+              
+              <div class="card-icon">
+                <!-- цю картинку можна завантажувати затримкою -->
+                <img src="assets\images\books-6.svg" width="40" height="40" loading="lazy" alt="11/22/63">
+              </div>
+              <h3 class="h3 card-title">
+                11/22/63
+              </h3>
+              
+              <p class="card-text">
+                This is a time travel adventure novel that tells the story of Jake Epping, a high school English teacher who is introduced to a portal to 1958 and sets out on a mission to stop the JFK assassination. Jake adopts a new identity, tests the rules of time travel, and discovers what may wait in the present if he's to succeed. 
+              </p>
+
+              <a href="https://www.goodreads.com/book/show/10644930-11-22-63?ref=nav_sb_ss_1_8" class="btn-link">
+                <span class="span">
+                  Read more
+                </span>
+                <ion-icon name="chevron-forward-outline" aria-hidden="true">
+                  
+                </ion-icon>
+              </a>
+
+            </div>
+
+          </li>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    </article>
+  </main>
 
 
 
