@@ -566,6 +566,32 @@ body {
               #PREVIEW
 \*-----------------------------------*/
 
+.tab-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+}
+
+.tab-card {
+  position: relative;
+  max-height: 60px;
+  background-color: var(--seashell);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
