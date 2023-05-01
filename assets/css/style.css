@@ -383,7 +383,18 @@ body {
   color: var(--white);
 }
 
+.img-holder {
+  aspect-ratio: var(--width) / var(--height);
+  background-color: var(--light-gray);
 
+}
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
 
 
 
@@ -735,11 +746,8 @@ body {
 
 .pricing-card .btn {
   margin-inline: auto;
-  
+
 }
-
-
-
 
 
 
