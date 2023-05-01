@@ -9,9 +9,9 @@
 
 /* селектор - змінні діють в межах всієї сторінки */
 :root {
-/* в CSS змінні, які називаються "кастомними властивостями" (custom properties), починаються з двох мінусів ("--") */
+  /* в CSS змінні, які називаються "кастомними властивостями" (custom properties), починаються з двох мінусів ("--") */
 
-/* колірний простір HSL (Hue, Saturation, Lightness) */
+  /* колірний простір HSL (Hue, Saturation, Lightness) */
   --chinese-violet_30: hsla(304, 85%, 36%, 0.3);
   --chinese-violet: hsl(304, 14%, 46%);
   --sonic-silver: hsl(208, 7%, 46%);
@@ -25,14 +25,15 @@
   --white: hsl(0, 0%, 100%);
 
 
-/**
+  /**
    * typography
    */
 
   --ff-philosopher: 'Philosopher', sans-serif;
   --ff-poppins: 'Poppins', sans-serif;
 
-  --fs-1: 4rem; /* 1rem = 16 px*/
+  --fs-1: 4rem;
+  /* 1rem = 16 px*/
   --fs-2: 3.2rem;
   --fs-3: 2.7rem;
   --fs-4: 2.4rem;
@@ -44,11 +45,11 @@
   --fw-700: 700;
 
 
-/**
+  /**
    * spacing
    */
 
-/* padding - це відстань від границі елемента до його вмісту (контенту) */
+  /* padding - це відстань від границі елемента до його вмісту (контенту) */
   --section-padding: 80px;
 
 
@@ -56,10 +57,12 @@
    * shadows
    */
 
-   /* h - тон кольору, s - насиченість, l - яскравість, a - прозорість */
+  /* h - тон кольору, s - насиченість, l - яскравість, a - прозорість */
   --shadow-1: 4px 6px 10px hsla(231, 94%, 7%, 0.06);
-  --shadow-2: 2px 0 15px 5px hsla(231, 94%, 7%, 0.06); /* розмір і розмір розсіювання */
-  --shadow-3: 3px 3px var(--chinese-violet); /* горизонтальне + вертикальне */
+  --shadow-2: 2px 0 15px 5px hsla(231, 94%, 7%, 0.06);
+  /* розмір і розмір розсіювання */
+  --shadow-3: 3px 3px var(--chinese-violet);
+  /* горизонтальне + вертикальне */
   --shadow-4: 5px 5px var(--chinese-violet);
 
   /**
@@ -72,15 +75,16 @@
   * clip path
   */
   --polygon: polygon(100% 29%,
-                     100% 100%,
-                     19% 99%,
-                     0 56%);
+      100% 100%,
+      19% 99%,
+      0 56%);
 
 
   /**
   * transition
-  */                  
-  --transition-1: 0.25s ease; /* тривалість, крива згладжування - плавний перехід*/
+  */
+  --transition-1: 0.25s ease;
+  /* тривалість, крива згладжування - плавний перехід*/
   --transition-2: 0.5s ease;
 
   /* cubic-bezier(<x1>, <y1>, <x2>, <y2>) */
@@ -111,10 +115,13 @@
 *,
 *::before,
 *::after {
-  margin: 0; /* зовнішній */
-  padding: 0; /* внутрішній */
-  box-sizing: border-box; /* для елементів з різними розмірами*/
-} 
+  margin: 0;
+  /* зовнішній */
+  padding: 0;
+  /* внутрішній */
+  box-sizing: border-box;
+  /* для елементів з різними розмірами*/
+}
 
 li {
   list-style: none;
@@ -132,7 +139,7 @@ ion-icon {
 
 a {
   color: inherit;
-  text-decoration:hsl(208, 7%, 46%);
+  text-decoration: hsl(208, 7%, 46%);
 }
 
 img {
@@ -149,7 +156,7 @@ textarea {
 
 input,
 textarea {
-   width: 100%;
+  width: 100%;
 }
 
 button {
@@ -167,7 +174,8 @@ ion-icon {
 html {
   font-family: var(--ff-poppins);
   font-size: 10px;
-  scroll-behavior: smooth; /* для плавної прокрутки? */
+  scroll-behavior: smooth;
+  /* для плавної прокрутки? */
 }
 
 body {
@@ -175,7 +183,8 @@ body {
   color: var(--sonic-silver);
   font-size: 1.6rem;
   line-height: 1.8;
-  /*height: 400vh;*/ /* без цього не буде скролу */
+  /*height: 400vh;*/
+  /* без цього не буде скролу */
 }
 
 :focus-visible {
@@ -250,7 +259,7 @@ body {
 }
 
 .section:nth-child(odd) {
-   background-color: var(--seashell);
+  background-color: var(--seashell);
 }
 
 .section-subtitle {
@@ -357,7 +366,8 @@ body {
 
 .header {
   background-color: var(--white);
-  position: absolute; /* точно визначена позиція */
+  position: absolute;
+  /* точно визначена позиція */
   top: 10px;
   right: 10px;
   left: 10px;
@@ -374,7 +384,8 @@ body {
   filter: drop-shadow(var(--shadow-1));
   transform: translateY(-100%);
   transition: none;
-  animation: slideIn 0.5s ease forwards; /* коли анімація закінчується, елемент зберігає останній кадр анімації, замість повернення до свого початкового стану */
+  animation: slideIn 0.5s ease forwards;
+  /* коли анімація закінчується, елемент зберігає останній кадр анімації, замість повернення до свого початкового стану */
 }
 
 /* animation */
@@ -382,10 +393,11 @@ body {
   0% {
     transform: translateY(-100%);
   }
+
   100% {
     transform: translateY(0);
   }
-} 
+}
 
 .header .container {
   display: flex;
@@ -415,7 +427,8 @@ body {
 }
 
 .navbar {
-  position: absolute; /* приховати елем на сторінці*/
+  position: absolute;
+  /* приховати елем на сторінці*/
   top: 100%;
   left: 0;
   width: 100%;
@@ -434,7 +447,8 @@ body {
 }
 
 .navbar-list {
-  margin-block-end: 10px; /* встановлення зовнішнього відступу (порожнього простору) від кінця (нижньої границі) елемента */
+  margin-block-end: 10px;
+  /* встановлення зовнішнього відступу (порожнього простору) від кінця (нижньої границі) елемента */
 }
 
 .navbar-link {
