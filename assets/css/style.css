@@ -689,17 +689,55 @@ body {
 
 
 
-
-
-
-
-
-
-
-
 /*-----------------------------------*\
               #PRICING
 \*-----------------------------------*/
+
+.pricing-card {
+  padding: 40px 50px;
+  background-color: var(--white);
+  text-align: center;
+  transition: var(--transition-1);
+}
+
+.pricing-card:is(:hover, :focus-within),
+.pricing-card.bundle {
+  box-shadow: var(--shadow-4);
+
+}
+
+.pricing-card:is(:hover, :focus-within) {
+  transform: translateY(-10px);
+}
+
+.pricing-card .price {
+  font-family: var(--ff-philosopher);
+  font-size: var(--fs-1);
+  color: var(--charcoal);
+  font-weight: var(--fw-700);
+  margin-block-start: 10px;
+}
+
+.pricing-card-list {
+  margin-block: 20px 40px;
+
+}
+
+.pricing-card-list .card-item:not(:last-child) {
+  border-block-end: 1px solid var(--ghost-white);
+
+}
+
+.pricing-card .card-text {
+  padding-block: 10px;
+
+}
+
+.pricing-card .btn {
+  margin-inline: auto;
+  
+}
+
 
 
 
