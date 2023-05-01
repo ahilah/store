@@ -356,6 +356,33 @@ body {
   box-shadow: 7px -7px var(--old-rose_30);
 }
 
+.btn {
+  padding: 12px 30px;
+  transition: var(--transition-1);
+
+}
+
+.btn-primary {
+  background-color: var(--old-rose);
+  color: var(--white);
+
+}
+
+.btn-primary:is(:hover, :focus) {
+  background-color: var(--chinese-violet);
+}
+
+.btn-secondary {
+  border: 1px solid var(--old-rose);
+  color: var(--old-rose);
+
+}
+
+.btn-secondary:is(:hover, :focus) {
+  background-color: var(--old-rose);
+  color: var(--white);
+}
+
 
 
 
