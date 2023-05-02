@@ -1,9 +1,4 @@
 /*-----------------------------------*\
-                #style.css
-\*-----------------------------------*/
-
-
-/*-----------------------------------*\
             #CUSTOM PROPERTY
 \*-----------------------------------*/
 
@@ -359,7 +354,6 @@ body {
 .btn {
   padding: 12px 30px;
   transition: var(--transition-1);
-
 }
 
 .btn-primary {
@@ -375,7 +369,6 @@ body {
 .btn-secondary {
   border: 1px solid var(--old-rose);
   color: var(--old-rose);
-
 }
 
 .btn-secondary:is(:hover, :focus) {
@@ -386,14 +379,12 @@ body {
 .img-holder {
   aspect-ratio: var(--width) / var(--height);
   background-color: var(--light-gray);
-
 }
 
 .img-cover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-
 }
 
 
@@ -521,7 +512,6 @@ body {
 .hero .hero-title {
   margin-block: 16px 25px;
 }
-
 
 .hero-banner {
   padding-inline-start: 30px;
@@ -652,7 +642,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
-
 }
 
 .tab-card {
@@ -681,7 +670,6 @@ body {
 .tab-card.active {
   height: 50vh;
   box-shadow: none;
-
 }
 
 .tab-text {
@@ -694,9 +682,7 @@ body {
 
 .tab-card.active .tab-text {
   display: none;
-
 }
-
 
 
 
@@ -731,22 +717,18 @@ body {
 
 .pricing-card-list {
   margin-block: 20px 40px;
-
 }
 
 .pricing-card-list .card-item:not(:last-child) {
   border-block-end: 1px solid var(--ghost-white);
-
 }
 
 .pricing-card .card-text {
   padding-block: 10px;
-
 }
 
 .pricing-card .btn {
   margin-inline: auto;
-
 }
 
 
@@ -762,29 +744,24 @@ body {
 .author .container {
   display: grid;
   gap: 40px;
-
 }
 
 .author-content {
   background-color: var(--white);
   padding: 30px;
-
 }
 
 .author:is(.section-subtitle, .section-subtitle) {
   text-align: left;
-
 }
 
 .author-name {
   font-size: var(--fs-700);
   margin-block-end: 30px;
-
 }
 
 .author .section-text {
   font-size: unset;
-
 }
 
 
@@ -824,6 +801,91 @@ body {
 /*-----------------------------------*\
               #FEEDBACK
 \*-----------------------------------*/
+
+.contact .wrapper {
+  display: grid;
+  gap: 25px;
+}
+
+.contact-form {
+  background-color: var(--seashell);
+  padding: 20px;
+}
+
+.input-field {
+  background-color: var(--white);
+  padding: 10px;
+  margin-block-end: 15px;
+  outline: none;
+  border-block-end: 2px solid transparent;
+}
+
+.input-field:focus {
+  border-color: var(--old-rose);
+}
+
+textarea.input-field {
+  resize: vertical;
+  min-height: 120px;
+  height: 120px;
+  max-height: 200px;
+}
+
+.contact-form .btn {
+   margin-inline: auto; 
+}
+
+.contact-card {
+  background-color: var(--seashell);
+  padding: 30px;
+}
+
+.contact-card .card-title {
+  font-family: var(--ff-philosopher);
+  text-transform: uppercase;
+  font-weight: var(--fw-700);
+}
+
+.contact-card > li:not(:last-child) {
+  margin-block-end: 30px;
+}
+
+.contact-card .card-link {
+  color: var(--chinese-violet);
+  transition: var(--transition-1);
+}
+
+.contact-card .card-link:is(:hover, :focus) {
+  color: var(--old-rose);
+}
+
+.social-list-title {
+  font-size: var(--fs-6);
+  font-weight: var(--fs-700);
+  margin-block-end: 15px;
+}
+
+.container-social-list-title,
+.container-button-submit {
+  display: grid;
+  place-items: center; 
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-link {
+  background-color: var(--old-rose);
+  color: var(--white);
+  font-size: 20px;
+  padding: 5px;
+  box-shadow: var(--shadow-3);
+  transition: var(--transition-1);
+}
 
 
 
