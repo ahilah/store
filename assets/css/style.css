@@ -972,9 +972,35 @@ textarea.input-field {
   transform: translateX(-50%);
 }
 
+.tab-card.active {
+  height: 50vh;
+}
 
+.achievement-card {
+  display: flex;
+}
 
+.achievement-card > * {
+  width: 50%;
+}
 
+.achievement-card .card-content {
+  padding: 30px;
+}
+
+.achievement-card .card-title {
+  margin-block-end: 20px;
+}
+
+.social-list-title {
+  --fs-6: 2.2rem;
+}
+
+.social-link {
+  font-size: 25px;
+  padding: 8px;
+  
+}
 
 
 
