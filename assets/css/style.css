@@ -955,6 +955,23 @@ textarea.input-field {
   margin-inline: auto;
 }
 
+.section-text {
+  --fs-7: 2rem; 
+}
+
+.header {
+  top: 30px;
+}
+
+.header.active {
+  max-width: unset;
+}
+
+.navbar {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 
 
 
