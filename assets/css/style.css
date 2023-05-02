@@ -1,5 +1,5 @@
 /*-----------------------------------*\
-            #CUSTOM PROPERTY
+            #PROPERTIES
 \*-----------------------------------*/
 
 /* селектор - змінні діють в межах всієї сторінки */
@@ -238,6 +238,7 @@ body {
   background-position: center 2px;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(73, 73, 73)'><polygon points='0,0 100,0 50,50'/></svg>");
 }
+
 
 
 /*-----------------------------------*\
@@ -524,7 +525,6 @@ body {
   border-radius: 9px 30px;
 }
 
-
 .hero-banner::before {
   top: 30px;
   right: 30px;
@@ -798,6 +798,7 @@ body {
 }
 
 
+
 /*-----------------------------------*\
               #FEEDBACK
 \*-----------------------------------*/
@@ -887,7 +888,10 @@ textarea.input-field {
   transition: var(--transition-1);
 }
 
-
+.social-link:is(:hover, :focus) {
+  background-color: var(--chinese-violet);
+  box-shadow: none;
+}
 
 
 
@@ -895,7 +899,39 @@ textarea.input-field {
               #FOOTER
 \*-----------------------------------*/
 
+.footer {
+  background-color: var(--seashell);
+  text-align: center; 
+}
 
+.footer-top {
+  padding-block: 50px;
+  border-block-end: 1px solid var(--chinese-violet_30);
+}
+
+.footer .logo {
+  margin-block-end: 15px;
+}
+
+.footer-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 20px;
+}
+
+.footer-link {
+  color: var(--charcoal);
+  transition: var(--transition-1); 
+}
+
+.footer-link:is(:hover, :focus) {
+  color: var(--old-rose);
+}
+
+.footer-bottom {
+  padding-block: 20px;
+}
 
 
 
