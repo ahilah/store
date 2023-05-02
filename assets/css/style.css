@@ -938,3 +938,32 @@ textarea.input-field {
 /*-----------------------------------*\
           #MEDIA QUERIES
 \*-----------------------------------*/
+
+@media(min-width: 575px) {
+
+:root {
+  --fs-2: 4.5rem;
+  --fs-3: 3.5rem;
+  --fs-5: 2.5rem;
+}
+
+.container,
+.header,
+.navbar {
+  max-width: 540px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+
+
+
+
+
+
+
+
+
+}
+
+.grid-list { grid-template-columns: 1fr 1fr; }
