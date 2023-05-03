@@ -1,5 +1,5 @@
 /*-----------------------------------*\
-            #PROPERTIES
+              #PROPERTIES
 \*-----------------------------------*/
 
 /* селектор - змінні діють в межах всієї сторінки */
@@ -7,16 +7,20 @@
   /* в CSS змінні, які називаються "кастомними властивостями" (custom properties), починаються з двох мінусів ("--") */
 
   /* колірний простір HSL (Hue, Saturation, Lightness) */
-  --chinese-violet_30: hsla(304, 85%, 36%, 0.3);
-  --chinese-violet: hsl(304, 14%, 46%);
-  --sonic-silver: hsl(208, 7%, 46%);
-  --old-rose_30: hsla(357, 37%, 62%, 0.3);
-  --ghost-white: hsl(233, 33%, 95%);
-  --light-pink: hsl(357, 93%, 84%);
+  --caf-noir: rgba(92, 62, 30, 0.544); /* полігон */
+  --kobicha:hsla(27, 53%, 33%, 1);
+
+  --raw-umber: rgba(220, 113, 6, 0.49);
+
+  --copper: rgb(201, 134, 17);
+
+  --coyote: rgba(162, 87, 26, 0.715);
+  --seashell: hsla(35, 44%, 92%, 1);
+  --bistre: hsla(34, 65%, 10%, 1);
+
+  --sonic-silver: rgb(134, 134, 134);
   --light-gray: hsl(0, 0%, 80%);
-  --old-rose: hsl(357, 37%, 62%);
-  --seashell: hsl(20, 43%, 93%);
-  --charcoal: hsl(203, 30%, 26%);
+  --ghost-white: hsl(233, 33%, 95%);
   --white: hsl(0, 0%, 100%);
 
 
@@ -39,7 +43,6 @@
   --fw-500: 500;
   --fw-700: 700;
 
-
   /**
    * spacing
    */
@@ -47,37 +50,36 @@
   /* padding - це відстань від границі елемента до його вмісту (контенту) */
   --section-padding: 80px;
 
-
   /**
-   * shadows
+   * shadow
    */
 
   /* h - тон кольору, s - насиченість, l - яскравість, a - прозорість */
   --shadow-1: 4px 6px 10px hsla(231, 94%, 7%, 0.06);
   --shadow-2: 2px 0 15px 5px hsla(231, 94%, 7%, 0.06);
   /* розмір і розмір розсіювання */
-  --shadow-3: 3px 3px var(--chinese-violet);
+  --shadow-3: 3px 3px var(--kobicha);
   /* горизонтальне + вертикальне */
-  --shadow-4: 5px 5px var(--chinese-violet);
+  --shadow-4: 5px 5px var(--kobicha);
+
 
   /**
    * radius
    */
+
   --radius-5: 5px;
   --radius-10: 10px;
 
   /**
-  * clip path
-  */
-  --polygon: polygon(100% 29%,
-      100% 100%,
-      19% 99%,
-      0 56%);
+   * clip path
+   */
 
+  --polygon: polygon(100% 29%, 100% 100%, 19% 99%, 0 56%);
 
   /**
-  * transition
-  */
+   * transition
+   */
+
   --transition-1: 0.25s ease;
   /* тривалість, крива згладжування - плавний перехід*/
   --transition-2: 0.5s ease;
@@ -87,19 +89,22 @@
 
 
   /* 
-  У CSS існує кілька типів фільтрів згладжування:
-    blur() - згладжує растрове зображення за допомогою гаусівського розмивання з вказаною радіусом. Це дає ефект розмиття зображення.
-    contrast() - збільшує або зменшує контрастність зображення. Це може зробити зображення більш яскравим або менш насиченим.
-    brightness() - збільшує або зменшує яскравість зображення. Це може зробити зображення світлішим або темнішим.
-    grayscale() - змінює зображення на чорно-біле.
-    sepia() - змінює зображення на сепію.
-    invert() - інвертує кольори зображення.
-    saturate() - збільшує або зменшує насиченість кольорів зображення.
-    hue-rotate() - змінює відтінок кольорів на зображенні.
-    opacity() - збільшує або зменшує прозорість зображення.
-    drop-shadow() - додає тінь до зображення.
-  */
+    У CSS існує кілька типів фільтрів згладжування:
+      blur() - згладжує растрове зображення за допомогою гаусівського розмивання з вказаною радіусом. Це дає ефект розмиття зображення.
+      contrast() - збільшує або зменшує контрастність зображення. Це може зробити зображення більш яскравим або менш насиченим.
+      brightness() - збільшує або зменшує яскравість зображення. Це може зробити зображення світлішим або темнішим.
+      grayscale() - змінює зображення на чорно-біле.
+      sepia() - змінює зображення на сепію.
+      invert() - інвертує кольори зображення.
+      saturate() - збільшує або зменшує насиченість кольорів зображення.
+      hue-rotate() - змінює відтінок кольорів на зображенні.
+      opacity() - збільшує або зменшує прозорість зображення.
+      drop-shadow() - додає тінь до зображення.
+    */
+
 }
+
+
 
 
 
@@ -127,6 +132,7 @@ img,
 span,
 data,
 input,
+button,
 textarea,
 ion-icon {
   display: block;
@@ -134,7 +140,7 @@ ion-icon {
 
 a {
   color: inherit;
-  text-decoration: hsl(208, 7%, 46%);
+  text-decoration: none;
 }
 
 img {
@@ -187,24 +193,24 @@ body {
 }
 
 ::selection {
-  background-color: var(--old-rose);
+  background-color: var(--coyote);
   color: var(--white);
 }
 
 ::-webkit-scrollbar {
-  width: 15px;
+  width: 14px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: hsl(0, 0%, 97%);
+  background-color: hsl(0, 0%, 98%);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: hsl(0, 0%, 81%);
+  background-color: hsl(0, 0%, 80%);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: hsl(0, 0%, 75%);
+  background-color: hsl(0, 0%, 70%);
 }
 
 /* Buttons */
@@ -242,7 +248,7 @@ body {
 
 
 /*-----------------------------------*\
-             #REUSED STYLE
+            #REUSED STYLE
 \*-----------------------------------*/
 
 .container {
@@ -258,9 +264,9 @@ body {
 }
 
 .section-subtitle {
-  color: var(--old-rose);
+  color: var(--coyote);
   text-transform: uppercase;
-  font-weight: var(--fs-700);
+  font-weight: var(--fw-700);
   letter-spacing: 4px;
   text-align: center;
 }
@@ -269,7 +275,7 @@ body {
 .h2,
 .h3,
 .tab-text {
-  color: var(--charcoal);
+  color: var(--bistre);
   font-family: var(--ff-philosopher);
   line-height: 1.2;
 }
@@ -316,8 +322,8 @@ body {
 }
 
 .btn-link {
-  color: var(--old-rose);
-  font-weight: var(--fs-500);
+  color: var(--coyote);
+  font-weight: var(--fw-500);
   display: flex;
   align-items: center;
   gap: 5px;
@@ -325,7 +331,7 @@ body {
 }
 
 .btn-link:is(:hover, :focus) {
-  color: var(--chinese-violet);
+  color: var(--kobicha);
 }
 
 .has-underline {
@@ -335,7 +341,7 @@ body {
 
 .has-underline .span {
   height: 2px;
-  background-color: var(--old-rose_30);
+  background-color: var(--raw-umber);
   width: 200px;
   margin-inline: auto;
   margin-block-start: 30px;
@@ -347,8 +353,8 @@ body {
   top: 2px;
   left: 45%;
   transform: translateY(-50%) rotate(45deg);
-  background-color: var(--old-rose_30);
-  box-shadow: 7px -7px var(--old-rose_30);
+  background-color: var(--raw-umber);
+  box-shadow: 7px -7px var(--raw-umber);
 }
 
 .btn {
@@ -357,21 +363,21 @@ body {
 }
 
 .btn-primary {
-  background-color: var(--old-rose);
+  background-color: var(--coyote);
   color: var(--white);
 }
 
 .btn-primary:is(:hover, :focus) {
-  background-color: var(--chinese-violet);
+  background-color: var(--kobicha);
 }
 
 .btn-secondary {
-  border: 1px solid var(--old-rose);
-  color: var(--old-rose);
+  border: 1px solid var(--coyote);
+  color: var(--coyote);
 }
 
 .btn-secondary:is(:hover, :focus) {
-  background-color: var(--old-rose);
+  background-color: var(--coyote);
   color: var(--white);
 }
 
@@ -388,6 +394,8 @@ body {
 
 
 
+
+
 /*-----------------------------------*\
                 #HEADER
 \*-----------------------------------*/
@@ -395,7 +403,6 @@ body {
 .header {
   background-color: var(--white);
   position: absolute;
-  /* точно визначена позиція */
   top: 10px;
   right: 10px;
   left: 10px;
@@ -416,7 +423,6 @@ body {
   /* коли анімація закінчується, елемент зберігає останній кадр анімації, замість повернення до свого початкового стану */
 }
 
-/* animation */
 @keyframes slideIn {
   0% {
     transform: translateY(-100%);
@@ -436,17 +442,22 @@ body {
 .logo {
   font-family: var(--ff-philosopher);
   font-size: 4rem;
-  color: var(--charcoal);
+  color: var(--bistre);
   line-height: 1;
 }
 
 .nav-toggle-btn {
   font-size: 40px;
-  color: var(--charcoal);
+  color: var(--bistre);
 }
 
 .nav-toggle-btn ion-icon {
   --ionicon-stroke-width: 20px;
+}
+
+.nav-toggle-btn.active .open,
+.nav-toggle-btn .close {
+  display: none;
 }
 
 .nav-toggle-btn .open,
@@ -471,7 +482,7 @@ body {
 .navbar.active {
   max-height: 300px;
   visibility: visible;
-  transition-duration: 0.05s;
+  transition-duration: 0.5s;
 }
 
 .navbar-list {
@@ -479,63 +490,96 @@ body {
   /* встановлення зовнішнього відступу (порожнього простору) від кінця (нижньої границі) елемента */
 }
 
+/* при наведенні на пункт меню він підсвічується іншим кольором */
 .navbar-link {
-  color: var(--charcoal);
+  color: var(--bistre);
   padding-block: 8px;
   line-height: 1.5;
   transition: var(--transition-1);
 }
 
-/* при наведенні на пункт меню він підсвічується іншим кольором */
 .navbar-link:is(:hover, :focus) {
-  color: var(--old-rose);
+  color: var(--coyote);
 }
+
+
 
 
 
 /*-----------------------------------*\
-                #HOME
+                  #HOME
 \*-----------------------------------*/
 
-.hero {
+.home {
   padding-block-start: calc(var(--section-padding) + 60px);
   text-align: center;
 }
 
-.hero .container {
+.home .container {
   display: grid;
-  gap: 60px
+  gap: 60px;
 }
 
-.hero .hero-title {
-  margin-block: 16px 25px;
+.home .home-title {
+  margin-block: 10px 25px;
 }
 
-.hero-banner {
+.home-banner {
   padding-inline-start: 30px;
   padding-block-end: 30px;
   max-width: 420px;
   margin-inline: auto;
 }
 
-.hero-banner .w-100 {
-  border-radius: 9px 30px;
+.home-banner .w-100 {
+  border-radius: 10px 30px;
 }
 
-.hero-banner::before {
+.home-banner::before {
   top: 30px;
   right: 30px;
   bottom: 0;
   left: 0;
-  background-color: var(--light-pink);
+  background-color: var(--copper);
   border-radius: var(--radius-10);
   z-index: -1;
 }
 
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--white);
+  color: var(--kobicha);
+  font-size: 22px;
+  padding: 24px;
+  border-radius: 50%;
+  transition: var(--transition-1);
+  animation: pulse 3s ease infinite;
+}
+
+.play-btn:is(:hover, :focus) {
+  color: var(--coyote);
+}
+
+@keyframes pulse {
+  0%,
+  50% {
+    box-shadow: 0 0 0 0 hsla(0, 0%, 100%, 0.5);
+  }
+
+  100% {
+    box-shadow: 0 0 0 10px transparent;
+  }
+}
+
+
+
 
 
 /*-----------------------------------*\
-              #BOOKS
+                #BOOKS
 \*-----------------------------------*/
 
 .books .section-text {
@@ -562,14 +606,14 @@ body {
 .books-card::before {
   width: 80px;
   height: 80px;
-  background-color: var(--old-rose_30);
+  background-color: var(--raw-umber);
   transform: translateY(60px);
 }
 
 .books-card::after {
   width: 70px;
   height: 70px;
-  background-color: var(--chinese-violet_30);
+  background-color: var(--caf-noir);
   transform: translateY(65px);
 }
 
@@ -583,11 +627,11 @@ body {
 }
 
 .books-card:is(:hover, :focus-within)::after {
-  transition-delay: 0.09s;
+  transition-delay: 0.1s;
 }
 
 .books-card .card-icon {
-  background-color: var(--old-rose);
+  background-color: var(--coyote);
   max-width: max-content;
   padding: 10px;
   box-shadow: var(--shadow-3);
@@ -605,6 +649,8 @@ body {
 .books-card .btn-link {
   margin-block-start: 15px;
 }
+
+
 
 
 
@@ -631,8 +677,10 @@ body {
 
 
 
+
+
 /*-----------------------------------*\
-              #PREVIEW
+                #PREVIEW
 \*-----------------------------------*/
 
 .tab-list {
@@ -665,7 +713,7 @@ body {
 }
 
 .tab-card.active {
-  height: 50vh;
+  height: 40vh;
   box-shadow: none;
 }
 
@@ -674,7 +722,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(50% -50%);
+  transform: translate(-50%, -50%);
 }
 
 .tab-card.active .tab-text {
@@ -683,21 +731,22 @@ body {
 
 
 
+
+
 /*-----------------------------------*\
-              #PRICING
+                #PRICING
 \*-----------------------------------*/
 
 .pricing-card {
   padding: 40px 50px;
   background-color: var(--white);
   text-align: center;
-  transition: var(--transition-1);
+  transition: var(--transition-2);
 }
 
 .pricing-card:is(:hover, :focus-within),
 .pricing-card.bundle {
   box-shadow: var(--shadow-4);
-
 }
 
 .pricing-card:is(:hover, :focus-within) {
@@ -707,7 +756,7 @@ body {
 .pricing-card .price {
   font-family: var(--ff-philosopher);
   font-size: var(--fs-1);
-  color: var(--charcoal);
+  color: var(--bistre);
   font-weight: var(--fw-700);
   margin-block-start: 10px;
 }
@@ -730,8 +779,10 @@ body {
 
 
 
+
+
 /*-----------------------------------*\
-              #AUTHOR
+                #AUTHOR
 \*-----------------------------------*/
 
 .author {
@@ -743,23 +794,25 @@ body {
   gap: 40px;
 }
 
+.author :is(.section-subtitle, .section-title) {
+  text-align: left;
+}
+
 .author-content {
   background-color: var(--white);
   padding: 30px;
 }
 
-.author:is(.section-subtitle, .section-subtitle) {
-  text-align: left;
-}
-
 .author-name {
-  font-size: var(--fs-700);
+  font-size: var(--fs-6);
   margin-block-end: 30px;
 }
 
 .author .section-text {
   font-size: unset;
 }
+
+
 
 
 
@@ -787,7 +840,7 @@ body {
   padding: 15px;
 }
 
-.achievement-card .awr-img {
+.achievement-card .abs-img {
   position: absolute;
   top: 0;
   right: -5px;
@@ -796,8 +849,10 @@ body {
 
 
 
+
+
 /*-----------------------------------*\
-              #FEEDBACK
+                #CONTACT
 \*-----------------------------------*/
 
 .contact .wrapper {
@@ -819,7 +874,7 @@ body {
 }
 
 .input-field:focus {
-  border-color: var(--old-rose);
+  border-color: var(--coyote);
 }
 
 textarea.input-field {
@@ -849,35 +904,27 @@ textarea.input-field {
 }
 
 .contact-card .card-link {
-  color: var(--chinese-violet);
+  color: var(--kobicha);
   transition: var(--transition-1);
 }
 
 .contact-card .card-link:is(:hover, :focus) {
-  color: var(--old-rose);
+  color: var(--coyote);
 }
 
 .social-list-title {
   font-size: var(--fs-6);
-  font-weight: var(--fs-700);
+  font-weight: var(--fw-700);
   margin-block-end: 15px;
-}
-
-.container-social-list-title,
-.container-button-submit {
-  display: grid;
-  place-items: center;
 }
 
 .social-list {
   display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 10px;
 }
 
 .social-link {
-  background-color: var(--old-rose);
+  background-color: var(--coyote);
   color: var(--white);
   font-size: 20px;
   padding: 5px;
@@ -886,14 +933,16 @@ textarea.input-field {
 }
 
 .social-link:is(:hover, :focus) {
-  background-color: var(--chinese-violet);
+  background-color: var(--kobicha);
   box-shadow: none;
 }
 
 
 
+
+
 /*-----------------------------------*\
-              #FOOTER
+                #FOOTER
 \*-----------------------------------*/
 
 .footer {
@@ -903,7 +952,7 @@ textarea.input-field {
 
 .footer-top {
   padding-block: 50px;
-  border-block-end: 1px solid var(--chinese-violet_30);
+  border-block-end: 1px solid var(--caf-noir);
 }
 
 .footer .logo {
@@ -918,12 +967,12 @@ textarea.input-field {
 }
 
 .footer-link {
-  color: var(--charcoal);
+  color: var(--bistre);
   transition: var(--transition-1);
 }
 
 .footer-link:is(:hover, :focus) {
-  color: var(--old-rose);
+  color: var(--coyote);
 }
 
 .footer-bottom {
@@ -932,11 +981,17 @@ textarea.input-field {
 
 
 
+
+
 /*-----------------------------------*\
-          #MEDIA QUERIES
+            #MEDIA QUERIES
 \*-----------------------------------*/
 
-@media(min-width: 575px) {
+/**
+ * 575px screen
+ */
+
+@media (min-width: 575px) {
 
   :root {
     --fs-2: 4.5rem;
@@ -977,12 +1032,12 @@ textarea.input-field {
     display: flex;
   }
 
-  .achievement-card>* {
+  .achievement-card > * {
     width: 50%;
   }
 
   .achievement-card .card-content {
-    padding: 30px;
+    padding-block: 30px;
   }
 
   .achievement-card .card-title {
@@ -1000,7 +1055,12 @@ textarea.input-field {
 
 }
 
-@media(min-width: 768px) {
+
+/**
+ *    768px screen
+ */
+
+@media (min-width: 768px) {
 
   :root {
     --fs-2: 4.8rem;
@@ -1016,31 +1076,31 @@ textarea.input-field {
     grid-template-columns: 1fr 1fr;
   }
 
-  .hero {
+  .home {
     padding-block-start: calc(var(--section-padding) + 100px);
     text-align: left;
   }
 
-  .hero .container {
+  .home .container {
     grid-template-columns: 1fr 0.8fr;
     align-items: center;
   }
 
-  .hero .section-subtitle {
+  .home .section-subtitle {
     text-align: left;
   }
 
-  .benefits:is(.section-title, .section-text) {
+  .books :is(.section-title, .section-text) {
     text-align: left;
   }
 
-  .benefits-content {
+  .books-content {
     grid-column: 1 / 3;
   }
 
   :is(.chapters, .pricing) .grid-list li:last-child {
     grid-column: 1 / 3;
-    max-width: calc(50% - 17.5px);
+    max-width: calc(50% - 12.5px);
     width: 100%;
     margin-inline: auto;
   }
@@ -1057,9 +1117,8 @@ textarea.input-field {
     flex-direction: column;
   }
 
-  .achievement-card>* {
+  .achievement-card > * {
     width: 100%;
-
   }
 
   .contact .wrapper {
@@ -1068,7 +1127,13 @@ textarea.input-field {
 
 }
 
-@media(min-width: 992px) {
+
+
+/**
+ *        992px screen
+ */
+
+@media (min-width: 992px) {
 
   :root {
     --fs-2: 5.4rem;
@@ -1104,13 +1169,13 @@ textarea.input-field {
     gap: 30px;
   }
 
-  .benefits .grid-list {
+  .books .grid-list {
     grid-template-columns: repeat(4, 1fr);
     align-items: center;
   }
 
-  .benefits-content {
-    max-width: 88%;
+  .books-content {
+    max-width: 80%;
   }
 
   :is(.chapters, .pricing) .grid-list li:last-child {
@@ -1138,7 +1203,7 @@ textarea.input-field {
   }
 
   .author .container {
-    grid-template-columns: 0.6fr, 1fr;
+    grid-template-columns: 0.6fr 1fr;
     gap: 0;
   }
 
@@ -1166,13 +1231,19 @@ textarea.input-field {
 
   .contact-form {
     padding: 40px;
-
   }
-
 
 }
 
-@media(min-width: 1200px) {
+
+
+
+
+/**
+ *        1200px screen
+ */
+
+@media (min-width: 1200px) {
 
   :root {
     --fs-2: 6rem;
