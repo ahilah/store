@@ -1,0 +1,49 @@
+[
+  {
+    "imageSrc": ".\\assets\\images\\books-1.svg",
+    "title": "The Shining",
+    "imgCaption": "TheShining",
+    "description": "It's a deeply suspenseful paranormal story about Jack Torrance, who starts a new job as a caretaker at the Overlook Hotel, hoping to spend more time with his family and work on his writing. During the off-season, a chilling winter storm confines Jack to the hotel — and sinister forces begin to emerge.",
+    "goodreadsUrl": "https://www.goodreads.com/book/show/11588.The_Shining"
+  },
+
+  {
+    "imageSrc": ".\\assets\\images\\books-2.svg",
+    "title": "It",
+    "imgCaption": "It",
+    "description": "In Derry, Maine, seven teenagers first discovered the horror that they deemed 'It' — often taking the form of Pennywise the Clown. Now adults, each with their own successes, one of the self-proclaimed 'Losers Club' asks the gang to return and end the evil creature's reign once and for all.",
+    "goodreadsUrl": "https://www.goodreads.com/book/show/830502.It?from_search=true&from_srp=true&qid=ZhutxpeyGV&rank=3"
+  },
+
+  {
+    "imageSrc": ".\\assets\\images\\books-3.svg",
+    "title": "Misery",
+    "imgCaption": "Misery",
+    "description": "Paul gets in an accident and is rescued by Anne Wilkes, his #1 fan. While nursing Paul back to health after he shattered legs, she compels to write a novel, furious that he killed her favorite character.",
+    "goodreadsUrl": "https://www.goodreads.com/book/show/10614.Misery?ref=nav_sb_ss_1_6"
+  },
+
+  {
+    "imageSrc": ".\\assets\\images\\books-4.svg",
+    "title": "Carrie",
+    "imgCaption": "Carrie",
+    "description": " Carrie White, a telekinetic teenager who's able to move objects with her mind. Abused and bullied all her life, one traumatic day unleashes a streak of revenge that cumulates with a famously terrifying prom night scene.",
+    "goodreadsUrl": "https://www.goodreads.com/book/show/10592.Carrie?ref=nav_sb_ss_2_6"
+  },
+
+  {
+    "imageSrc": ".\\assets\\images\\books-5.svg",
+    "title": "The Gunslinger",
+    "imgCaption": "TheGunslinger",
+    "description": "This is the first installment of King's hugely popular series 'The Dark Tower', of which there are eight books and a short story. Roland of Gilead is The Last Gunslinger — the final hero in a knightly order.",
+    "goodreadsUrl": "https://www.goodreads.com/book/show/43615.The_Gunslinger?ref=nav_sb_ss_1_14"
+  },
+
+  {
+    "imageSrc": ".\\assets\\images\\books-6.svg",
+    "title": "11/22/63",
+    "imgCaption": "11/22/63",
+    "description": "This is a time travel adventure novel that tells the story of Jake Epping, a high school English teacher who is introduced to a portal to 1958 and sets out on a mission to stop the JFK assassination.",
+    "goodreadsUrl": "https://www.goodreads.com/book/show/10644930-11-22-63?ref=nav_sb_ss_1_8"
+  }
+]

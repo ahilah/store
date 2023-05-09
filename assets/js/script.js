@@ -34,6 +34,47 @@ fetch('chapters.json')
 
 
 
+/**
+ *            BOOKS DATA FROM JSON
+ */
+
+const booksContainer = document.getElementById('books_section');
+
+// Завантажуємо JSON-файл зі списком книжок
+fetch('books.json')
+  .then(response => response.json())
+  .then(books => {
+    // Для кожної книжки в JSON-файлі створюємо HTML-блок
+    books.forEach(book => {
+      const bookElement = document.createElement('li');
+      bookElement.innerHTML = `
+      <div class="books-card has-before has-after">
+      <div class="card-icon">
+      <img src=${book.imageSrc} width="40" height="40" loading="lazy" alt=${book.imgCaption}>
+      </div>
+      <h3 class="h3 card-title">${book.title}</h3>
+      <p class="card-text">${book.description}</p>
+      <a href=${book.goodreadsUrl} target="_blank" class="btn-link">
+      <span class="span">
+                    Read more
+      </span>
+      <ion-icon name="chevron-forward-outline" aria-hidden="true">
+      </ion-icon>
+      </a>
+      </div>
+      `;
+
+      // Додаємо HTML-блок до контейнера
+      booksContainer.appendChild(bookElement);
+    });
+  })
+  .catch(error => console.error(error));
+
+
+
+
+
+
 
 /**
  * adding event on element
