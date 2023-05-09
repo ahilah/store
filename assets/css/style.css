@@ -908,6 +908,11 @@ textarea.input-field {
   transition: var(--transition-1);
 }
 
+.container-social-list-title {
+  display: flex;
+  justify-content: center;
+}
+
 .contact-card .card-link:is(:hover, :focus) {
   color: var(--coyote);
 }
@@ -920,6 +925,7 @@ textarea.input-field {
 
 .social-list {
   display: flex;
+  justify-content: center;
   gap: 10px;
 }
 

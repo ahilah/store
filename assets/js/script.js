@@ -178,6 +178,9 @@ const navigateTab = function() {
 addEventOnelem(tabCard, "click", navigateTab);
 
 
+/**
+ *        BUTTON SEND FEEDBACK DISAPPEAR
+ */
 
 const hideEmailBtn = document.getElementById('send-feedback');
 
