@@ -73,6 +73,43 @@ fetch('books.json')
 
 
 
+  /**
+ *            ACHIEVEMENTS DATA FROM JSON
+ */
+
+
+  const achievementsContainer = document.getElementById('achievements_section');
+
+  // Завантажуємо JSON-файл зі списком частин
+  fetch('achievements.json')
+    .then(response => response.json())
+    .then(achievements => {
+      // Для кожної частини в JSON-файлі створюємо HTML-блок
+      achievements.forEach(achievement => {
+        const achievementsElement = document.createElement('li');
+        achievementsElement.innerHTML = `
+        <div class="achievement-card">
+        <figure class="card-banner img-holder" style="--width: 450; --height: 300;">
+        <img src=${achievement.imageSrc} width="450" height="300" loading="lazy" alt=${achievement.imgCaption}
+                      class="img-cover">
+        </figure>
+        <div class="card-content">
+        <img src=".\\assets\\images\\award.svg" width="80" height="80" loading="lazy" alt="trophy"
+                      class="abs-img">
+        <h3 class="h3 card-title">${achievement.title}</h3>
+        <p class="card-text">${achievement.description}</p>
+        </div>
+        </div>
+        `;
+  
+        // Додаємо HTML-блок до контейнера
+        achievementsContainer.appendChild(achievementsElement);
+      });
+    })
+    .catch(error => console.error(error));
+
+
+
 
 
 

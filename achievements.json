@@ -1,0 +1,43 @@
+[
+  {
+    "imageSrc": ".\\assets\\images\\achievement-1.jpg",
+    "title": "Winner",
+    "imgCaption": "Winner",
+    "description": "World Horror Convention (Grand Master Award-1992)"
+  },
+
+  {
+    "imageSrc": ".\\assets\\images\\achievement-2.jpg",
+    "title": "Winner",
+    "imgCaption": "Winner",
+    "description": "Bram Stoker Award: Best Novel-1987 (Misery)"
+  },
+
+  {
+    "imageSrc": ".\\assets\\images\\achievement-3.jpg",
+    "title": "Nominated",
+    "imgCaption": "Nominated",
+    "description": "Bram Stoker Award: Best Novel-1994 (Insomnia)"
+  },
+
+  {
+    "imageSrc": ".\\assets\\images\\achievement-4.jpg",
+    "title": "Winner",
+    "imgCaption": "Winner",
+    "description": "August Derleth Award for Best Horror Novel(Dark Tower VIII)"
+  },
+  
+  {
+    "imageSrc": ".\\assets\\images\\achievement-5.jpg",
+    "title": "Winner",
+    "imgCaption": "Winner",
+    "description": "Colorado Young Adult: Best Collection (Pet Sematary)"
+  },
+
+  {
+    "imageSrc": ".\\assets\\images\\achievement-6.jpg",
+    "title": "Nominated",
+    "imgCaption": "Nominated",
+    "description": "August Derleth Award for Best Horror Novel (11/22/63)"
+  }
+]
