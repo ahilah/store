@@ -3,6 +3,39 @@
 
 
 /**
+ *            CHAPTERS DATA FROM JSON
+ */
+
+const productsContainer = document.getElementById('chapters_section');
+
+// Завантажуємо JSON-файл зі списком частин
+fetch('chapters.json')
+  .then(response => response.json())
+  .then(products => {
+    // Для кожної частини в JSON-файлі створюємо HTML-блок
+    products.forEach(product => {
+      const productElement = document.createElement('li');
+      productElement.innerHTML = `
+        <div class="chapter-card">
+        <p class="card-subtitle">${product.number}</p>
+        <h3 class="h3 card-title">${product.title}</h3>
+        <p class="card-text">${product.text}</p>
+        </div>
+      `;
+
+      // Додаємо HTML-блок до контейнера
+      productsContainer.appendChild(productElement);
+    });
+  })
+  .catch(error => console.error(error));
+
+
+
+
+
+
+
+/**
  * adding event on element
  */
 
