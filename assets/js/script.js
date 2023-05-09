@@ -176,3 +176,11 @@ const navigateTab = function() {
 }
 
 addEventOnelem(tabCard, "click", navigateTab);
+
+
+
+const hideEmailBtn = document.getElementById('send-feedback');
+
+hideEmailBtn.addEventListener('click', function() {
+  hideEmailBtn.style.display = 'none';
+});
