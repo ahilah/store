@@ -73,6 +73,9 @@ fetch('books.json')
 
 
 
+  
+
+
   /**
  *            ACHIEVEMENTS DATA FROM JSON
  */
@@ -129,6 +132,9 @@ const addEventOnelem = function (elem, type, callback) {
 
 
 
+
+
+
 /**
  * toggle navbar
  */
@@ -163,6 +169,8 @@ addEventOnelem(window, "scroll", activeHeader);
 
 
 
+
+
 /**
  * open chapter prereading tab
  */
@@ -178,6 +186,8 @@ const navigateTab = function() {
 addEventOnelem(tabCard, "click", navigateTab);
 
 
+
+
 /**
  *        BUTTON SEND FEEDBACK DISAPPEAR
  */
@@ -187,3 +197,48 @@ const hideEmailBtn = document.getElementById('send-feedback');
 hideEmailBtn.addEventListener('click', function() {
   hideEmailBtn.style.display = 'none';
 });
+
+
+
+
+
+
+// Select the form and add an event listener to it
+var form = document.getElementById('contact-form');
+form.addEventListener('submit', submitForm);
+
+function submitForm(event) {
+  event.preventDefault(); // Prevent the form from being submitted
+
+  // Get the values from the form fields
+  var formData = {
+    'name': document.querySelector('input[name="name"]').value,
+    'email': document.querySelector('input[name="email_address"]').value,
+    'subject': document.querySelector('input[name="subject"]').value,
+    'message': document.querySelector('textarea[name="message"]').value
+  };
+
+  // Convert the form data to JSON format
+  var jsonData = JSON.stringify(formData);
+
+  // Send the JSON data to the server
+  fetch('save-form-data.json', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: jsonData
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    console.log('Form data saved successfully');
+    alert('Form data saved successfully');
+    form.reset(); // Reset the form
+  })
+  .catch(error => {
+    console.error('There was a problem saving the form data:', error);
+    alert('There was a problem saving the form data. Please try again later.');
+  });
+}
