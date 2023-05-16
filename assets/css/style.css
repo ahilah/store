@@ -12,11 +12,11 @@
 
   --raw-umber: rgba(220, 113, 6, 0.49);
 
-  --copper: rgb(201, 134, 17);
+  --copper: #c98611;
 
   --coyote: rgba(162, 87, 26, 0.715);
-  --seashell: hsla(35, 44%, 92%, 1);
-  --bistre: hsla(34, 65%, 10%, 1);
+  --seashell: #f4ece2;
+  --bistre: #2a1c09;
 
   --sonic-silver: rgb(134, 134, 134);
   --light-gray: hsl(0, 0%, 80%);

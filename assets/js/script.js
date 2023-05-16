@@ -6,25 +6,25 @@
  *            CHAPTERS DATA FROM JSON
  */
 
-const productsContainer = document.getElementById('chapters_section');
+const chaptersContainer = document.getElementById('chapters_section');
 
 // Завантажуємо JSON-файл зі списком частин
 fetch('chapters.json')
   .then(response => response.json())
-  .then(products => {
+  .then(chapters => {
     // Для кожної частини в JSON-файлі створюємо HTML-блок
-    products.forEach(product => {
-      const productElement = document.createElement('li');
-      productElement.innerHTML = `
+    chapters.forEach(chapter => {
+      const chapterElement = document.createElement('li');
+      chapterElement.innerHTML = `
         <div class="chapter-card">
-        <p class="card-subtitle">${product.number}</p>
-        <h3 class="h3 card-title">${product.title}</h3>
-        <p class="card-text">${product.text}</p>
+        <p class="card-subtitle">${chapter.number}</p>
+        <h3 class="h3 card-title">${chapter.title}</h3>
+        <p class="card-text">${chapter.text}</p>
         </div>
       `;
 
       // Додаємо HTML-блок до контейнера
-      productsContainer.appendChild(productElement);
+      chaptersContainer.appendChild(chapterElement);
     });
   })
   .catch(error => console.error(error));
@@ -73,7 +73,7 @@ fetch('books.json')
 
 
 
-  
+
 
 
   /**
@@ -222,7 +222,7 @@ function submitForm(event) {
   var jsonData = JSON.stringify(formData);
 
   // Send the JSON data to the server
-  fetch('save-form-data.json', {
+  fetch('user-data.json', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
